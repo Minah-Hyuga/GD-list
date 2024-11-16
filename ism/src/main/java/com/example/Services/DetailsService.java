@@ -3,7 +3,6 @@ package com.example.Services;
 import java.util.List;
 
 import com.example.Data.Entity.Details;
-import com.example.Data.Repository.list.DetailsRepository;
 import com.example.Data.Repository.list.IDetailsRepository;
 
 public class DetailsService implements IDetailService {
@@ -20,7 +19,7 @@ public class DetailsService implements IDetailService {
 
     @Override
     public void create(Details details) {
-        DetailsRepository.add(details);
+        detailsRepository.add(details);
         System.out.println("Details ajouter avec succès");
     }
 

@@ -10,4 +10,6 @@ public interface IClientRepository {
 
     Client selectBySurname(String value);
 
+    void add(Client client);
+
 }

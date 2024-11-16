@@ -3,7 +3,6 @@ package com.example.Services;
 import java.util.List;
 
 import com.example.Data.Entity.Article;
-import com.example.Data.Repository.list.ArticleRepository;
 import com.example.Data.Repository.list.IArticleRepository;
 
 public class ArticleService implements IArticleService {
@@ -15,12 +14,17 @@ public class ArticleService implements IArticleService {
 
     @Override
     public void create(Article article) {
-        ArticleRepository.add(article);
-
+        articleRepository.add(article);
     }
 
     @Override
     public List<Article> getAll() {
         return articleRepository.getAll();
+    }
+
+    @Override
+    public void add(Article article) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'add'");
     }
 }

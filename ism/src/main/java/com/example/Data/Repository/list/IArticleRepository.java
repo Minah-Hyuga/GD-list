@@ -8,4 +8,6 @@ public interface IArticleRepository {
 
     List<Article> getAll();
 
+    void add(Article article);
+
 }

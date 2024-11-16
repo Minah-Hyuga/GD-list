@@ -121,7 +121,7 @@ public class Main {
                     System.out.println("Choix non valide. Veuillez réessayer.");
                     break;
             }
-        } while (choice != 13);
+        } while (choice != 15);
     }
 
     // Méthode pour afficher le menu et obtenir le choix de l'utilisateur

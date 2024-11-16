@@ -3,7 +3,6 @@ package com.example.Services;
 import java.util.List;
 
 import com.example.Data.Entity.Client;
-import com.example.Data.Repository.list.ClientRepository;
 import com.example.Data.Repository.list.IClientRepository;
 
 public class ClientService implements IClientService {
@@ -15,7 +14,7 @@ public class ClientService implements IClientService {
 
     @Override
     public void create(Client client) {
-        ClientRepository.add(client);
+        clientRepository.add(client);
     }
 
     @Override

@@ -10,14 +10,12 @@ public class ClientRepository implements IClientRepository {
     private List<Client> clients;
 
     public ClientRepository() {
-        // Initialisation de la liste des clients
         this.clients = new ArrayList<>();
-        // Ajouter des clients par défaut si nécessaire
     }
 
     @Override
     public List<Client> getAll() {
-        return new ArrayList<>(clients); // Retourne une copie de la liste pour éviter la modification externe
+        return new ArrayList<>(clients);
     }
 
     @Override
@@ -27,11 +25,11 @@ public class ClientRepository implements IClientRepository {
                 return client;
             }
         }
-        return null; // Retourne null si aucun client avec ce nom n'est trouvé
+        return null;
     }
 
-    // Méthode pour ajouter un client (optionnelle)
-    public void addClient(Client client) {
+    public void add(Client client) {
         clients.add(client);
     }
+
 }

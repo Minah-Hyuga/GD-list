@@ -2,22 +2,30 @@ package com.example.Data.Repository.list;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.example.Data.Entity.Dette;
 
 public class DetteRepository implements IDetteRepository {
 
-    // Liste pour stocker les dettes
     private List<Dette> detteList;
 
     public DetteRepository() {
-        // Initialisation de la liste des dettes
         this.detteList = new ArrayList<>();
     }
 
-    // Méthode pour ajouter une dette
     public void add(Dette dette) {
-        detteList.add(dette); // Ajoute l'objet dette à la liste
+        detteList.add(dette);
     }
+    // // Méthode pour supprimer une dette par son ID
+    // public boolean delete(int idDette) {
+    // for (int i = 0; i < detteList.size(); i++) {
+    // if (detteList.get(i).getIdDette() == idDette) {
+    // detteList.remove(i); // Supprime l'élément à l'index i
+    // return true; // Retourne true si la suppression a réussi
+    // }
+    // }
+    // return false; // Retourne false si aucune dette n'a été trouvée avec cet ID
+    // }
 
     // Méthode pour récupérer toutes les dettes
     public List<Dette> getAll() {

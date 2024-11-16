@@ -3,6 +3,7 @@ package com.example.View;
 import java.util.List;
 
 import com.example.Data.Entity.Article;
+import com.example.Data.Entity.Client;
 
 public class ArticleView extends ImplView<Article> implements IArticleView {
     @Override
@@ -20,9 +21,20 @@ public class ArticleView extends ImplView<Article> implements IArticleView {
     }
 
     @Override
-    public void afficher(List<Article> all) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'afficher'");
+    public void afficher(List<Article> articles) {
+        if (articles.isEmpty()) {
+            System.out.println("Aucun article enregistré.");
+        } else {
+            System.out.println("Liste des articles ajoutés :");
+            for (Article article : articles) {
+                System.out.println("---------------------------");
+                System.out.println("Réference : " + article.getRef());
+                System.out.println("Libellé : " + article.getLibelle());
+                System.out.println("Prix : " + article.getPrix());
+                System.out.println("Quantité de l'article : " + article.getQuantiteArticle());
+                System.out.println("---------------------------");
+            }
+        }
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.example.Services;
 import java.util.List;
 
 import com.example.Data.Entity.Dette;
-import com.example.Data.Repository.list.DetteRepository;
 import com.example.Data.Repository.list.IDetteRepository;
 
 public class DetteService implements IDetteService {
@@ -14,13 +13,12 @@ public class DetteService implements IDetteService {
     }
 
     @Override
-    public void create(Dette dette) {
-        DetteRepository.add(dette);
-        System.out.println("Dette ajouter avec succès");
+    public List<Dette> getAll() {
+        return detteRepository.getAll();
     }
 
     @Override
-    public List<Dette> getAll() {
-        return detteRepository.getAll();
+    public void create(Dette dette) {
+        detteRepository.add(dette);
     }
 }

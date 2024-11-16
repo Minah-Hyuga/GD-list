@@ -19,9 +19,18 @@ public class ClientView extends ImplView<Client> implements IClientView {
     }
 
     @Override
-    public void afficher(List<Client> all) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'afficher'");
+    public void afficher(List<Client> clients) {
+        if (clients.isEmpty()) {
+            System.out.println("Aucun client enregistré.");
+        } else {
+            System.out.println("Liste des clients enregistrés :");
+            for (Client client : clients) {
+                System.out.println("Nom : " + client.getSurname());
+                System.out.println("Téléphone : " + client.getTel());
+                System.out.println("Adresse : " + client.getAddresse());
+                System.out.println("---------------------------");
+            }
+        }
     }
 
     @Override
