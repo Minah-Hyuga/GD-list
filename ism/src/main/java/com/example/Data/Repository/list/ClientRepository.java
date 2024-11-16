@@ -32,4 +32,7 @@ public class ClientRepository implements IClientRepository {
         clients.add(client);
     }
 
+    public void remove(Client client) {
+        clients.remove(client);
+    }
 }

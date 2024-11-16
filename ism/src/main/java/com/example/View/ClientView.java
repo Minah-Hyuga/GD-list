@@ -34,6 +34,7 @@ public class ClientView extends ImplView<Client> implements IClientView {
     }
 
     @Override
+
     public Client getObject(List<Client> list) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getObject'");

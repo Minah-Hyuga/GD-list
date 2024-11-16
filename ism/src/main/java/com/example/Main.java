@@ -70,49 +70,51 @@ public class Main {
             switch (choice) {
                 case 1:
                     clientService.create(clientView.saisir());
+                    System.out.println("Client ajouter avec succés");
                     break;
                 case 2:
                     clientView.afficher(clientService.getAll());
                     break;
                 case 3:
                     userService.create(userView.saisir());
+                    System.out.println("Utilisateur ajouter avec succés");
                     break;
                 case 4:
                     userView.afficher(userService.getAll());
                     break;
                 case 5:
                     detailService.create(detailsView.saisir());
+                    System.out.println("Details ajouter avec succés");
                     break;
                 case 6:
                     detailsView.afficher(detailService.getAll());
                     break;
                 case 7:
                     articleService.create(articleView.saisir());
+                    System.out.println("Article ajouter avec succés");
                     break;
                 case 8:
                     articleView.afficher(articleService.getAll());
                     break;
                 case 9:
                     detteService.create(detteView.saisir());
+                    System.out.println("Dette ajouter avec succés");
                     break;
                 case 10:
                     detteView.afficher(detteService.getAll());
                     break;
                 case 11:
-                    // Code pour supprimer un article (à implémenter)
-                    System.out.println("Suppression d'un article ");
+                    // clientRepository.delete(detteView.remove());
+                    System.out.println("Suppression d'un client ");
                     break;
                 case 12:
-                    // Code pour supprimer une dette (à implémenter)
-                    System.out.println("Suppression d'une dette ");
+                    System.out.println("Suppression d'un utilisateur ");
                     break;
                 case 13:
-                    // Code pour supprimer un client (à implémenter)
-                    System.out.println("Suppression d'un client non ");
+                    System.out.println("Suppression d'un article ");
                     break;
                 case 14:
-                    // Code pour supprimer un utilisateur (à implémenter)
-                    System.out.println("Suppression d'un utilisateur ");
+                    System.out.println("Suppression d'une dette ");
                     break;
                 case 15:
                     System.out.println("Au revoir!");
@@ -124,7 +126,6 @@ public class Main {
         } while (choice != 15);
     }
 
-    // Méthode pour afficher le menu et obtenir le choix de l'utilisateur
     public static int menu() {
         System.out.println("Menu:");
         System.out.println("1- Ajouter un client");

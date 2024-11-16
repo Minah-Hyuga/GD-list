@@ -27,4 +27,12 @@ public class UserService implements IUserService {
         throw new UnsupportedOperationException("Unimplemented method 'getAll'");
     }
 
+    public User getUserById(int idUser) {
+        return userRepository.getByIdUser(idUser);
+    }
+
+    public boolean deleteUser(int idUser) {
+        return userRepository.delete(idUser);
+    }
+
 }

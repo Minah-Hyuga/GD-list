@@ -2,10 +2,9 @@ package com.example.View;
 
 import java.util.List;
 
-import com.example.Data.Entity.Article;
 import com.example.Data.Entity.User;
 
-public class UserView extends ImplView implements IUserView {
+public class UserView extends ImplView<User> implements IUserView {
     @Override
     public User saisir() {
         User user = new User();
@@ -20,25 +19,26 @@ public class UserView extends ImplView implements IUserView {
     }
 
     @Override
-    public void afficher(List<User> user) {
-        if (user.isEmpty()) {
+    public void afficher(List<User> users) {
+        if (users.isEmpty()) {
             System.out.println("Aucun utilisateur enregistré.");
         } else {
-            System.out.println("Liste des articles ajoutés :");
-            for (Article user : user) {
-                System.out.println("---------------------------");
-                System.out.println("Réference : " + user.getRef());
-                System.out.println("Libellé : " + user.getLibelle());
-                System.out.println("Prix : " + user.getPrix());
-                System.out.println("Quantité de l'article : " + user.getQuantiteArticle());
+            System.out.println("Liste des utilisateurs enregistrés :");
+            for (User user : users) {
+                System.out.println("Login : " + user.getLogin());
+                System.out.println("Mot de passe : " + user.getPassword());
+                System.out.println("Email : " + user.getEmail());
+                System.out.println(
+                        "Client associé : " + (user.getClient() != null ? user.getClient().getSurname() : "Aucun"));
                 System.out.println("---------------------------");
             }
         }
     }
 
     @Override
-    public Object getObject(List list) {
+    public User getObject(List<User> list) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getObject'");
     }
+
 }
